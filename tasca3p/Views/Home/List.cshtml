@@ -1,0 +1,16 @@
+﻿@using tasca3p
+@using tasca3p.Models
+@model IEnumerable<tasca3p.Models.Lanches>
+
+<div><h2>Lista de lanches</h2></div>
+
+
+@foreach(var lanches in Model)
+{
+  
+            <div>
+                <h4>@lanches.Nome</h4>
+                <p><img src="@lanches.ImagemUrl"></p>
+                <h3>Preço : @lanches.Preco.ToString("c")</h3>
+            </div>
+}
